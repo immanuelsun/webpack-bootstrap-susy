@@ -1,0 +1,48 @@
+{
+  "name": "webpack-bootstrap-susy",
+  "version": "1.0.0",
+  "description": "A webpack starter kit using Bootstrap, Susy, Breakpoint.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "prod": "npm run clean && NODE_ENV=production webpack -p",
+    "clean": "rimraf ./dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immanuelsun888/webpack-bootstrap-susy.git"
+  },
+  "keywords": [
+    "Webpack",
+    "Bootstrap",
+    "Susy",
+    "Breakpoint",
+    "Responsive",
+    "React",
+    "ES6",
+    "Babel"
+  ],
+  "author": "Immanuel Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immanuelsun888/webpack-bootstrap-susy/issues"
+  },
+  "homepage": "https://github.com/immanuelsun888/webpack-bootstrap-susy#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "resolve-url-loader": "^2.0.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
