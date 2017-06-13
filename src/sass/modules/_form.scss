@@ -1,0 +1,28 @@
+    .form-signin {
+        margin: 4.5em auto 0;
+        height: 100%;
+        width: 30%;
+        input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 14px 10px;
+            font-size: 16px;
+        }
+        .checkbox {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+    }
+

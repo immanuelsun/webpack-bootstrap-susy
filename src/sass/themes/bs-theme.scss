@@ -1,0 +1,10 @@
+/* bootswatch theme - cosmo*/
+
+@import 'cosmo/_bootswatch.scss';
+
+/*  Navbar
+——————————————————————————————————— */
+
+.navbar-inverse {
+    background-color: darken($aqua, 40%) !important;
+}
