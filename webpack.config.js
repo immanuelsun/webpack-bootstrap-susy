@@ -17,6 +17,12 @@ var cssProd = ExtractTextPlugin.extract({
             }
         },
         {
+            loader: 'resolve-url-loader',
+            options: {
+                sourceMap: true
+            }
+        },
+        {
             loader: 'postcss-loader',
             options: {
                 sourceMap: true
@@ -41,7 +47,8 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        // publicPath: '/assets/'
     },
 
     devtool: 'source-map',
@@ -50,7 +57,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 7000,
-        hot: true,
+        hot: false,
         stats: 'errors-only',
         open: true
     },
@@ -101,13 +108,13 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Susy & Breakpoint Demo',
+            title: 'Bootstrap Grid, Susy & Breakpoint Demo',
             // minify: {
             //     collapseWhitespace: true
             // },
             hash: true,
-            template: path.resolve(__dirname, 'src/view/susy.html'),
-            filename: 'susy.html'
+            template: path.resolve(__dirname, 'src/view/grid.html'),
+            filename: 'grid.html'
         }),
         new HtmlWebpackPlugin({
             title: 'Cover Demo',
@@ -117,6 +124,15 @@ module.exports = {
             hash: true,
             template: path.resolve(__dirname, 'src/view/cover.html'),
             filename: 'cover.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Single Blog Post',
+            // minify: {
+            //     collapseWhitespace: true
+            // },
+            hash: true,
+            template: path.resolve(__dirname, 'src/view/single.html'),
+            filename: 'single.html'
         }),
         new ExtractTextPlugin({
             filename: 'styles.css',
