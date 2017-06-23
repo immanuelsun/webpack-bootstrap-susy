@@ -16,12 +16,12 @@ var cssProd = ExtractTextPlugin.extract({
                 sourceMap: true
             }
         },
-        {
-            loader: 'resolve-url-loader',
-            options: {
-                sourceMap: true
-            }
-        },
+        // {
+        //     loader: 'resolve-url-loader',
+        //     options: {
+        //         sourceMap: true
+        //     }
+        // },
         {
             loader: 'postcss-loader',
             options: {
@@ -41,9 +41,10 @@ var cssConfig = isProd ? cssProd : cssDev;
 
 
 module.exports = {
+    // context: path.join(__dirname, 'dist'),
     entry: [
-        './src/index.js',
-        'bootstrap-loader'
+        'bootstrap-loader',
+        './src/index.js'
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -58,12 +59,23 @@ module.exports = {
         compress: true,
         port: 7000,
         hot: false,
+        inline: true,
         stats: 'errors-only',
         open: true
     },
 
     module: {
         rules: [{
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }
+            },
+            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader']
             },
@@ -99,7 +111,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Project Demo',
+            title: 'Home',
             // minify: {
             //     collapseWhitespace: true
             // },
@@ -108,7 +120,7 @@ module.exports = {
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Bootstrap Grid, Susy & Breakpoint Demo',
+            title: 'Bootstrap Grid',
             // minify: {
             //     collapseWhitespace: true
             // },
@@ -117,7 +129,16 @@ module.exports = {
             filename: 'grid.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Cover Demo',
+            title: 'Susy & Breakpoint',
+            // minify: {
+            //     collapseWhitespace: true
+            // },
+            hash: true,
+            template: path.resolve(__dirname, 'src/view/susy.html'),
+            filename: 'susy.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Cover',
             // minify: {
             //     collapseWhitespace: true
             // },
@@ -126,13 +147,13 @@ module.exports = {
             filename: 'cover.html'
         }),
         new HtmlWebpackPlugin({
-            title: 'Single Blog Post',
+            title: 'Blog Post',
             // minify: {
             //     collapseWhitespace: true
             // },
             hash: true,
-            template: path.resolve(__dirname, 'src/view/single.html'),
-            filename: 'single.html'
+            template: path.resolve(__dirname, 'src/view/post.html'),
+            filename: 'post.html'
         }),
         new ExtractTextPlugin({
             filename: 'styles.css',

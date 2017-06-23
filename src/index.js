@@ -1,6 +1,9 @@
+/*  Vendors
+——————————————————————————————————— */
+import vendors from './venders/venders';
+
 /*  Bootsrtap
 ——————————————————————————————————— */
-// require('bootstrap-loader');
 import custom from './js/bs-config';
 
 /* Styles

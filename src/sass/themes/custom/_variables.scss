@@ -38,9 +38,6 @@
 // Close
 // Code
 
-@import '../../../../node_modules/bootstrap/scss/variables';
-@import '../../../../node_modules/bootstrap/scss/mixins';
-
 @mixin _assert-ascending($map, $map-name) {
   $prev-key: null;
   $prev-num: null;

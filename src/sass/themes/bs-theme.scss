@@ -1,2 +1,9 @@
+/* bootstrap 4 */
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+/* Susy */
+@import '~susy/sass/susy';
+
 /* bootswatch theme - custom*/
 @import 'custom/_bootswatch.scss';
