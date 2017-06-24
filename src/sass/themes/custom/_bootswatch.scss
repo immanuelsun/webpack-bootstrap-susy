@@ -1,13 +1,15 @@
 // Cosmo 4.0.0
 // Bootswatch
 
-@import '_variables.scss';
-
-$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
-@import url($web-font-path);
+@import 'variables';
 
 // General ======================================================================
 @import 'modules/globals';
+
+
+// Typography ==================================================================
+@import 'modules/typo';
+
 
 // Grid ========================================================================
 @import 'modules/grid';
@@ -15,10 +17,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 // Navbar ======================================================================
 
 // Buttons =====================================================================
-
-// Typography ==================================================================
-@import 'modules/typo';
-
 
 // Tables ======================================================================
 
@@ -42,3 +40,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 
 // Sidebar =====================================================================
 @import 'modules/sidebar';
+
+// Susy ========================================================================
+@import 'modules/susy';

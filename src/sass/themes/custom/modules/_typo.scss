@@ -1,12 +1,36 @@
 /*  Typography
 ——————————————————————————————————— */
+$web-font-path: "https://fonts.googleapis.com/css?family=Alfa+Slab+One|Crimson+Text:400,400i,600,600i,700,700i|Julius+Sans+One|Open+Sans+Condensed:300,300i,700|Playfair+Display+SC:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i" !default;
+
+@import url($web-font-path);
+
+// font-family: 'Playfair Display SC', serif;
+// font-family: 'Alfa Slab One', cursive;
+// font-family: 'Julius Sans One', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Open Sans Condensed', sans-serif;
+// font-family: 'Crimson Text', serif;
+
+body {
+  // font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: $font-family-serif;
+  font-size: 1.1rem;
+  -webkit-font-smoothing: antialiased;
+  color: $gray-light;
+  font-weight: 200;
+}
+
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
+  // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // font-family: 'Julius Sans One', sans-serif !important;
+  // font-family: 'Playfair Display SC', serif;
+  font-family: $font-family-headings;
+  color: $gray;
+  letter-spacing: 1.8px;
 }

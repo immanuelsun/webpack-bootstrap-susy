@@ -99,7 +99,7 @@ $blue:   #0275d8 !default;
 $teal:   #5bc0de !default;
 $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
-$aqua: #5CC9F5;
+$aqua:   #5CC9F5 !default;
 
 // Create grayscale
 $gray-dark:                 #373a3c !default;
@@ -242,15 +242,30 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+// Google Fonts
+$web-font-path: "https://fonts.googleapis.com/css?family=Alfa+Slab+One|Crimson+Text:400,400i,600,600i,700,700i|Julius+Sans+One|Open+Sans+Condensed:300,300i,700|Playfair+Display+SC:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900,900i" !default;
 
-$font-size-base: 0.9375rem;
-$font-size-lg:   1.25rem !default;
-$font-size-sm:   .875rem !default;
-$font-size-xs:   .75rem !default;
+@import url($web-font-path);
+
+// font-family: 'Playfair Display SC', serif;
+// font-family: 'Alfa Slab One', cursive;
+// font-family: 'Julius Sans One', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Open Sans Condensed', sans-serif;
+// font-family: 'Crimson Text', serif;
+
+
+$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+$font-family-headings: 'Alfa Slab One', cursive;
+// $font-family-serif:  Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif:  'Crimson Text', serif ;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:    $font-family-sans-serif;
+
+$font-size-base: 1.1rem ;
+$font-size-lg:   1.45rem ;
+$font-size-sm:   .875rem ;
+$font-size-xs:   .75rem ;
 
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
@@ -266,7 +281,7 @@ $font-size-h5: 1.25rem !default;
 $font-size-h6: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
-$headings-font-family:   inherit !default;
+$headings-font-family:   $font-family-cursive !default;
 $headings-font-weight:   300;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;

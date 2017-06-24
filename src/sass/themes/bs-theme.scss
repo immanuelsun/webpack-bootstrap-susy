@@ -5,5 +5,8 @@
 /* Susy */
 @import '~susy/sass/susy';
 
+/* Breakpoints */
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
 /* bootswatch theme - custom*/
 @import 'custom/_bootswatch.scss';

@@ -1,0 +1,7 @@
+.one {
+    @include span(14 at 0 of 24 1/4);
+}
+
+.two {
+    @include span(10 at 15 of 24 1/4);
+}

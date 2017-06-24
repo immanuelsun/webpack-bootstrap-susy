@@ -1,18 +1,80 @@
-.row {
-  margin-bottom: 1rem;
-}
-.row .row {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-[class*="col-"] {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid rgba(86,61,124,.2);
+/*  Grid using Susy
+——————————————————————————————————— */
+
+$susy: ( 
+    columns: 12, 
+    gutters: 1/4,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+    // flow: rtl,
+);  
+
+// $wide: ( 
+//     columns: 24, 
+//     gutters: 1/4,
+//     math: fluid,
+//     output: float,
+//     gutter-position: inside,
+//     // flow: rtl,
+// );
+
+// $wide: layout(24 1/4 fluid float inside);
+
+// @include layout($wide);
+
+// @include layout(24 1/4 fluid float inside);
+// @include layout(12 (60px 10px) fluid float inside);
+
+body {
+    padding-top: 2em; // background: #eee;
+    @include container(80%);
 }
 
-hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+main {
+    @include span(16 at 0 of 24 1/4); 
+}
+
+aside {
+    @include span(4 at 9);
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+            margin: 0;
+            a {
+                display: block;
+                padding: 10px 5%;
+                border-bottom: solid 1px $gray-lighter;
+            }
+            a:focus,
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/*  Grid Using Bootstrap
+——————————————————————————————————— */
+
+.grid {
+    .row {
+        margin-bottom: 1rem;
+    }
+    .row .row {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    [class*="col-"] {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid rgba(86, 61, 124, .2);
+    }
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }

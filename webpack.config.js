@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 
 var isProd = process.env.NODE_ENV === 'production'; // true or false
 
-var cssDev = ['style-loader', 'css-loader?sourceMap', 'sass-loader'];
+var cssDev = ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap'];
 var cssProd = ExtractTextPlugin.extract({
     fallback: 'style-loader',
     use: [{
@@ -16,12 +16,12 @@ var cssProd = ExtractTextPlugin.extract({
                 sourceMap: true
             }
         },
-        // {
-        //     loader: 'resolve-url-loader',
-        //     options: {
-        //         sourceMap: true
-        //     }
-        // },
+        {
+            loader: 'resolve-url-loader',
+            options: {
+                sourceMap: true
+            }
+        },
         {
             loader: 'postcss-loader',
             options: {
