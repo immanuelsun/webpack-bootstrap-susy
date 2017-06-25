@@ -1,18 +1,24 @@
 /*  Cover
 ——————————————————————————————————— */
+
+
 /* Links */
+
 a,
 a:focus,
 a:hover {
   color: #fff;
 }
 
+
 /* Custom default button */
+
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
 }
@@ -25,33 +31,41 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
+
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
+
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
+  height: 100%;
+  /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);   
+  background-color: $brand-primary;
+  -webkit-box-shadow: inset 0 0 3rem rgba(0, 0, 0, .2);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, .2);
 }
+
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
 }
+
 .cover-container {
   margin-right: auto;
   margin-left: auto;
 }
 
+
 /* Padding for spacing */
+
 .inner {
   padding: 2rem;
 }
@@ -67,22 +81,23 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  color: $white;
 }
 
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
-  color: rgba(255,255,255,.5);
+  color: $yellow;
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.nav-masthead .nav-link + .nav-link {
+.nav-masthead .nav-link+.nav-link {
   margin-left: 1rem;
 }
 
@@ -108,9 +123,14 @@ body {
 .cover {
   padding: 0 1.5rem;
 }
+
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
+}
+
+.cover-heading {
+  color: $white;
 }
 
 
@@ -119,7 +139,14 @@ body {
  */
 
 .mastfoot {
-  color: rgba(255,255,255,.5);
+  color: $white;
+  a {
+    color: $yellow;
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
 }
 
 
@@ -145,7 +172,8 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
